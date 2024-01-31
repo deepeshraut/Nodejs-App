@@ -3,12 +3,12 @@ Set up an AWS EC2 instance
 Create an EC2 instance
     - Select an OS image - Ubuntu
       Instance type - t2.micro
-2. Connecting to the instance using ssh
+Connecting to the instance using ssh
 
-3. Clone this project
+Clone this project
 git clone https://github.com/deepeshraut/Nodejs-App.git
 ```
-4. Setup the following environment variables - `(.env)` file
+Setup the following environment variables - `(.env)` file
 vim .env
 
 DOMAIN= "http://localhost:3000"
