@@ -1,5 +1,5 @@
-#Deploying a Node Js Application on AWS EC2 for Testing the project locally
-#Set up an AWS EC2 instance
+Deploying a Node Js Application on AWS EC2 for Testing the project locally.
+Set up an AWS EC2 instance
 Create an EC2 instance
     - Select an OS image - Ubuntu
       Instance type - t2.micro
