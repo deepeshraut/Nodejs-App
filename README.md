@@ -2,13 +2,11 @@ Create the EKS cluster with terraform.
 Prerequisite
 1. AWS Cli install and configured
 2. Terraform install on our local system.
-Then, create the infrastruture of EKS Cluster to create the EKS through terraform
-provider "aws" {
-  region = "us-east-1"
+Then, create the infrastruture of EKS Cluster to create the EKS through terraform.
+provider "aws" {                                                                                                            
+  region = "us-east-1"                                                                                                      
 }
-
-
-resource "aws_eks_cluster" "my_cluster" {
+resource "aws_eks_cluster" "my_cluster" {                                                                                   
   name     = "my-eks-cluster"
   role_arn = aws_iam_role.eks_cluster_role.arn
 
@@ -21,12 +19,11 @@ vpc_config {
 }
 
 resource "aws_eks_node_group" "my_node_group" {
-  cluster_name    = aws_eks_cluster.my_cluster.name
-  node_group_name = "my-node-group"
+  cluster_name    = aws_eks_cluster.my_cluster.name                                                                           node_group_name = "my-node-group"
   node_role_arn   = aws_iam_role.eks_node_group_role.arn
   subnet_ids      = ["subnet-003f0648235fa127a", "subnet-04b18b98fc5c485f5"]
 
-scaling_config {
+scaling_config {                                                        
     desired_size = 2
     max_size     = 3
     min_size     = 1
@@ -64,6 +61,7 @@ resource "aws_iam_role" "eks_node_group_role" {
     ]
   })
 }
+  
 
 EKS cluster created successfully.
 So, in this terraform file we've defined,
